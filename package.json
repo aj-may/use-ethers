@@ -1,0 +1,53 @@
+{
+  "name": "use-ethers",
+  "version": "0.0.0-semantically-released",
+  "description": "Reack hook for Ethers.js",
+  "homepage": "https://github.com/aj-may/use-ethers",
+  "author": {
+    "name": "A.J. May",
+    "email": "aj7may@gmail.com",
+    "url": "https://ajmay.co"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [],
+  "license": "MIT",
+  "devDependencies": {
+    "cod-scripts": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6",
+    "yarn": ">=1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aj-may/use-ethers.git"
+  },
+  "scripts": {
+    "build": "cod-scripts build",
+    "build:watch": "npm run build -- --watch",
+    "format": "cod-scripts format",
+    "lint": "cod-scripts lint",
+    "lint:commit": "cod-scripts commitlint",
+    "test": "cod-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/cod-scripts/eslint.js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "cod-scripts pre-commit",
+      "commit-msg": "cod-scripts commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.10.2",
+    "ethers": "^4.0.47",
+    "react": "^16.13.1"
+  }
+}
